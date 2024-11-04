@@ -1,13 +1,13 @@
 {% set name = "xarray-ceos-alos2" %}
-{% set version = "2023.8.2" %}
+{% set version = "2024.10.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/xarray-ceos-alos2-{{ version }}.tar.gz
-  sha256: db3e95bc4f7cbfc631bc720d97b0c18bf0ad794fc4c9d648133567347e6e8420
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: d1697147d654e1e9f19534d264f9812dbb147e53b0acdccb56e0c115d350c483
 
 build:
   noarch: python
