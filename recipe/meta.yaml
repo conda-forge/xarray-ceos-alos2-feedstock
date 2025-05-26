@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "xarray-ceos-alos2" %}
-{% set version = "2024.10.0" %}
+{% set version = "2025.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,14 +8,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: d1697147d654e1e9f19534d264f9812dbb147e53b0acdccb56e0c115d350c483
+  sha256: 09b19be211b766454c345d587b498339268445e9874de14c46d488c249498190
 
 build:
   noarch: python
   entry_points:
     - ceos-alos2-create-cache = ceos_alos2.sar_image.cli:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
