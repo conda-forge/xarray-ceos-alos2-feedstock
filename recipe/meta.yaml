@@ -1,6 +1,6 @@
 {% set python_min = "3.10" %}
 {% set name = "xarray-ceos-alos2" %}
-{% set version = "2025.5.0" %}
+{% set version = "2026.3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 09b19be211b766454c345d587b498339268445e9874de14c46d488c249498190
+  sha256: dcda3b11d849c9cfcd722d53a909db13e0d4d62be21262c1a465c207b2809b6c
 
 build:
   noarch: python
